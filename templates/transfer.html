@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer</title>
+    <!-- Bootstrap CDNS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="../static/CSS/transfer.css">
+    <link rel="stylesheet" href="../static/CSS/table.css">
+  </head>
+
+  <body>
+    <!-- NavBAr -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home">TSF Bank</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="Customers">View All Customers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="transfer">Transfer</a>
+              </li>
+              
+                </ul>
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    <!-- NavbarEND -->
+
+
+
+    <!-- FORM START -->
+    <div class="container">
+        <form action = /transfer class="postn" method="post">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Transfer to:</label>
+            <input
+              type="email"
+              name="to_email"
+              class="form-control"
+              id="to_email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+            <label for="exampleInputEmail1">Transfer from:</label>
+            <input
+              type="email"
+              name="from_email"
+              class="form-control"
+              id="from_email"
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <label>Enter Amount:</label>
+            <input type=" " name="amount" class="form-control" placeholder="eg: 12,34,567/-" />
+          </div>
+          <!-- <div class="form-group">
+  
+            <label>Enter Id:</label>
+            <input type="number" name="Id" class="form-control" placeholder="Id" />
+          </div> -->
+          <br />
+  
+          <button type="submit" class="btn btn-primary">Transfer</button>
+        </form>
+      </div>
+
+
+
+      <!-- Table -->
+
+
+
+      <table>
+        <tr>
+          <th>Sent to</th>
+          <th>Revieved by</th>
+          <th>Amount</th>
+          
+          <!-- <th>Id</th> -->
+        </tr>
+        {% for t in transactions %}
+        <tr>
+            <td>{{t.to_email}}</td>
+            <td>{{t.from_email}}</td>
+            <td>{{t.amount}}</td>
+            
+            
+            
+        </tr> 
+        {% endfor %}
+        
+      </table>
+  </body>
+</html>

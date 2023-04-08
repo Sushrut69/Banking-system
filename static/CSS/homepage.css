@@ -1,0 +1,16 @@
+.container {
+  width: 25%;
+  margin-top: 10%;
+}
+
+.postn {
+  width: 50%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+/* NAvBAR */
+
+.nav {
+  margin-right: 5%;
+}
