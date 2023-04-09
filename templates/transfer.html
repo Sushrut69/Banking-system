@@ -20,7 +20,7 @@
     ></script>
 
     <link rel="stylesheet" href="../static/CSS/transfer.css">
-    <link rel="stylesheet" href="../static/CSS/table.css">
+    
   </head>
 
   <body>
@@ -108,26 +108,12 @@
       <!-- Table -->
 
 
+      <div class="container">
+      <a href="transactionHistory">Show transaction history</a>
+      </div>
 
-      <table>
-        <tr>
-          <th>Sent to</th>
-          <th>Revieved by</th>
-          <th>Amount</th>
-          
-          <!-- <th>Id</th> -->
-        </tr>
-        {% for t in transactions %}
-        <tr>
-            <td>{{t.to_email}}</td>
-            <td>{{t.from_email}}</td>
-            <td>{{t.amount}}</td>
-            
-            
-            
-        </tr> 
-        {% endfor %}
-        
-      </table>
+
+
+    
   </body>
 </html>

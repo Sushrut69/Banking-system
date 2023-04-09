@@ -63,17 +63,23 @@ def Transfer():
         t1 = transfer(to_email = to_email, from_email = from_email, amount = amount)
         t1.save()
         
-    if request.method == 'GET':
-        transactions = transfer.objects()
-    res =  render_template('transfer.html' , transactions = transactions)
-    print(res)
-    return res
+    return render_template('Transfer.html')
+        
+    # if request.method == 'GET':
+    #     transactions = transfer.objects()
+    # res =  render_template('transfer.html' , transactions = transactions)
+    # print(res)
+    # return res
     
         
         
-# @app.route('/transfer',methods = ['GET'])
-# def Transfer():
-#     connect_to_db()
+@app.route('/transactionHistory', methods = ['GET'])
+def TransactionHistory():
+    connect_to_db()
+    if request.method == 'GET':
+        transactions = transfer.objects()
+    res =  render_template('transactionHistory.html' , transactions = transactions)
+    return res
     
        
     
