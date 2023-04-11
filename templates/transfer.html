@@ -67,9 +67,10 @@
 
     <!-- FORM START -->
     <div class="container">
-        <form action = /transfer class="postn" method="post">
+        <form action = /transfer class="postn" method="post" autocomplete="on">
           <div class="form-group">
             <label for="exampleInputEmail1">Transfer to:</label>
+            
             <input
               type="email"
               name="to_email"
@@ -77,6 +78,8 @@
               id="to_email"
               aria-describedby="emailHelp"
               placeholder="Enter email"
+              value = "{{transfer_to}}"
+              disabled
             />
             <label for="exampleInputEmail1">Transfer from:</label>
             <input

@@ -53,17 +53,22 @@ def Customers():
 def Transfer():
     connect_to_db()
     transactions = []
+    transfer_to = request.args.get('to_email')
+    print(transfer_to)
     # t1 = transfer(to_email = 'sushrut949@gmail.com' , from_email = 'test@gmail.com', amount = 1)
     # t1.save()
+    
     if request.method == 'POST':
         to_email = request.form.get('to_email')
         from_email = request.form.get('from_email')
-        amount = request.form.get('amount') 
+        amount = request.form.get('amount')
+         
         
         t1 = transfer(to_email = to_email, from_email = from_email, amount = amount)
         t1.save()
         
-    return render_template('Transfer.html')
+        
+    return render_template('Transfer.html',transfer_to = transfer_to)
         
     # if request.method == 'GET':
     #     transactions = transfer.objects()
