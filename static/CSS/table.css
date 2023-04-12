@@ -1,3 +1,8 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -12,5 +17,13 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #ddddde;
+}
+
+.logo-image {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
 }

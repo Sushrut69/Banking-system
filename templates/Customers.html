@@ -20,14 +20,26 @@
         crossorigin="anonymous"
       ></script>
 
+      <!-- google cdns -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet"> 
+
     <title>Customers</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/logo_small.png">
     <link rel="stylesheet" href="../static/CSS/table.css">
   </head>
   <body>
         <!-- NavBAr -->
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="home">TSF Bank</a>
+              <a class="navbar-brand" href="/">
+                <div class="logo-image">
+                      <img src="../static/images/logo_small.png" class="img-fluid">
+                      
+                </div>
+                </a>
+                <a class="navbar-brand" href="/">TSF Global</a>
               <button
                 class="navbar-toggler"
                 type="button"
@@ -42,7 +54,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="home"
+                    <a class="nav-link " aria-current="page" href="/"
                       >Home</a
                     >
                   </li>
@@ -63,8 +75,9 @@
             </div>
           </nav>
         <!-- NavbarEND -->
-    <h1>All Customers</h1>
+    <h1 style="text-align: center; margin: 3%;">All Customers</h1>
 
+    <div class="container">
     <table>
         <tr>
           <th>Email</th>
@@ -85,6 +98,17 @@
         {% endfor %}
         
       </table>
+    </div>
+
+      <br>
+      <br><br>
+
+
+
+      <div class="container-fluid">
+        <hr>
+        <p style="text-align: center;">Sushrut Thete 2023 &#169;</p>
+        </div>
       
   </body>
 </html>

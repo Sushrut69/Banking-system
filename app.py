@@ -14,6 +14,11 @@ app = Flask(__name__)
 def connect_to_db():
     connect("test",host = "mongodb+srv://sushrut69:Qwerty123@cluster0.hea5x0y.mongodb.net/test")
     
+    
+@app.route('/')
+def index():
+    return render_template("index.html")
+    
 
 
 
@@ -55,6 +60,7 @@ def Transfer():
     transactions = []
     transfer_to = request.args.get('to_email')
     print(transfer_to)
+    users = User.objects()
     # t1 = transfer(to_email = 'sushrut949@gmail.com' , from_email = 'test@gmail.com', amount = 1)
     # t1.save()
     
@@ -68,7 +74,7 @@ def Transfer():
         t1.save()
         
         
-    return render_template('Transfer.html',transfer_to = transfer_to)
+    return render_template('Transfer.html',transfer_to = transfer_to , users = users)
         
     # if request.method == 'GET':
     #     transactions = transfer.objects()
