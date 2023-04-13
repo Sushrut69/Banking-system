@@ -82,8 +82,7 @@
     <div class="container">
         <form action = /transfer class="postn" method="post" >
           <div class="form-group">
-            <label for="exampleInputEmail1">Transfer to:</label>
-            
+            <label for="exampleInputEmail1">Transfer to:</label>           
             <input
               type="email"
               name="to_email"
@@ -101,7 +100,9 @@
               {% for u in users %}
               <option >{{u.email}}</option>
               {% endfor %}
+              
               required
+
               
             </select>
             
